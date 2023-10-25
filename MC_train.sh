@@ -1,0 +1,11 @@
+python MC_train.py \
+  --model_name_or_path hfl/chinese-roberta-wwm-ext \
+  --train_file ./dataset/train.json \
+  --validation_file ./dataset/valid.json \
+  --context_file ./dataset/context.json \
+  --max_seq_length 512 \
+  --per_device_train_batch_size 2 \
+  --gradient_accumulation_steps 8 \
+  --learning_rate 1e-5 \
+  --num_train_epochs 3 \
+  --output_dir ./model/MC
